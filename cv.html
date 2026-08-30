@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<!-- Massively by HTML5 UP | html5up.net | CCA 3.0 -->
+<html lang="en">
+	<head>
+		<!-- <title>CV | Agni Pythara</title> -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Curriculum vitae of Agni Pythara, computational photonics researcher." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			:root { --cv-ink: #212931; --cv-muted: #6f7780; --cv-accent: #7a5c43; --cv-soft: #f5f1eb; }
+			.cv-page { padding: 5rem 7rem !important; }
+			.cv-hero { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: end; padding-bottom: 3rem; border-bottom: solid 2px var(--cv-ink); }
+			.cv-hero h1 { margin: 0 0 .35rem; font-size: clamp(2.7rem, 7vw, 5.4rem); line-height: .95; letter-spacing: .03em; }
+			.cv-kicker { margin: 0; color: var(--cv-accent); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+			.cv-contact { margin: 0; text-align: right; list-style: none; }
+			.cv-contact li { margin: .2rem 0; }
+			.cv-contact a { border-bottom-color: transparent; }
+			.cv-summary { max-width: 58rem; margin: 3rem auto 4rem; font-size: 1.12rem; line-height: 1.95; text-align: center; }
+			.cv-section { margin: 4.5rem 0; }
+			.cv-section-title { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; font-size: 1.35rem; letter-spacing: .18em; }
+			.cv-section-title:after { content: ""; height: 1px; flex: 1; background: #d9d9d9; }
+			.cv-entry { display: grid; grid-template-columns: 9rem 1fr; gap: 2rem; margin: 0 0 2.1rem; }
+			.cv-date { color: var(--cv-muted); font-size: .82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding-top: .4rem; }
+			.cv-entry h3 { margin: 0; font-size: 1.25rem; }
+			.cv-entry .place { margin: .35rem 0 .9rem; color: var(--cv-accent); font-weight: 600; }
+			details.cv-details { border: solid 1px #dedede; border-radius: 4px; background: #fff; transition: background-color .2s ease, border-color .2s ease; }
+			details.cv-details[open] { background: var(--cv-soft); border-color: #c9b8a8; }
+			details.cv-details summary { position: relative; padding: .85rem 3rem .85rem 1rem; cursor: pointer; font-size: .78rem; font-weight: 700; letter-spacing: .12em; list-style: none; text-transform: uppercase; }
+			details.cv-details summary::-webkit-details-marker { display: none; }
+			details.cv-details summary:after { content: "+"; position: absolute; right: 1rem; font-size: 1.25rem; line-height: 1; }
+			details.cv-details[open] summary:after { content: "−"; }
+			details.cv-details ul { margin: 0; padding: 0 2rem 1.3rem 3rem; }
+			details.cv-details li { margin-bottom: .55rem; }
+			.cv-education-note { margin: .6rem 0 0; }
+			.cv-highlight { display: inline-block; margin: .75rem .45rem 0 0; padding: .35rem .65rem; border: solid 1px #d6c8bb; border-radius: 999px; background: var(--cv-soft); font-size: .72rem; font-weight: 700; letter-spacing: .06em; }
+			.cv-skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+			.cv-skill { padding: 1.4rem 1.5rem; border-left: solid 3px var(--cv-accent); background: var(--cv-soft); }
+			.cv-skill h3 { margin: 0 0 .5rem; font-size: .9rem; }
+			.cv-skill p { margin: 0; line-height: 1.7; }
+			.cv-note { text-align: center; color: var(--cv-muted); font-style: italic; }
+			@media screen and (max-width: 980px) { .cv-page { padding: 4rem 3rem !important; } }
+			@media screen and (max-width: 736px) {
+				.cv-page { padding: 3rem 1.4rem !important; }
+				.cv-hero { grid-template-columns: 1fr; }
+				.cv-contact { padding-left: 0; text-align: left; }
+				.cv-entry { grid-template-columns: 1fr; gap: .45rem; }
+				.cv-skills { grid-template-columns: 1fr; }
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<header id="header"><a href="index.html" class="logo">Agni Pythara</a></header>
+			<nav id="nav" aria-label="Primary navigation">
+				<ul class="links">
+					<li><a href="index.html">Projects</a></li>
+					<li class="active"><a href="cv.html" aria-current="page">CV</a></li>
+				</ul>
+				<ul class="icons">
+					<li><a href="mailto:agnespythara@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</nav>
+
+			<main id="main" class="cv-page">
+				<!-- <section class="cv-hero" aria-labelledby="cv-title">
+					<div>
+						<p class="cv-kicker">Curriculum Vitae</p>
+						<h1 id="cv-title">Agni<br />Pythara</h1>
+					</div>
+					<ul class="cv-contact">
+						<li>Ioannina, Greece</li>
+						<li><a href="mailto:agnespythara@gmail.com">agnespythara@gmail.com</a></li>
+						<li><a href="tel:+306975770187">+30 697 577 0187</a></li>
+					</ul>
+				</section> -->
+
+				<p class="cv-summary">Early-career computational photonics researcher with a background in physics and advanced materials. My work focuses on nonlinear and ultrafast optics, graphene carrier dynamics, integrated photonics and optical pulse shaping, combining physics-based modelling with large-scale numerical simulation.</p>
+
+				<section class="cv-section" aria-labelledby="research-title">
+					<h2 class="cv-section-title" id="research-title">Research Experience</h2>
+					<article class="cv-entry">
+						<div class="cv-date">2025–2026</div>
+						<div>
+							<h3>MSc Thesis Research</h3>
+							<p class="place">Study of graphene saturable absorption for near-infrared optical pulse reshaping · University of Ioannina</p>
+							<details class="cv-details">
+								<summary>Explore the research</summary>
+								<ul>
+									<li>Adapted a Fortran carrier-dynamics model from picosecond to femtosecond excitation, accounting for faster dynamics and broader pulse bandwidth.</li>
+									<li>Coupled nonequilibrium carrier dynamics to the time-dependent optical response of multilayer photonic structures.</li>
+									<li>Developed a Python workflow to automate, manage, post-process and visualize more than 30,000 simulations.</li>
+									<li>Compared predictions with nonlinear-transmission measurements to assess model limitations and refine physical assumptions.</li>
+									<li>Optimized asymmetric graphene-loaded Fabry–Pérot cavities, predicting absorption enhancement from 2.3% to nearly 100%.</li>
+									<li>Numerically demonstrated passive all-optical pulse shaping from a single-peaked input into reflected profiles with two or three peaks.</li>
+									<li>Implemented a transfer-matrix model for graphene third-harmonic generation and a COMSOL benchmark model.</li>
+								</ul>
+							</details>
+						</div>
+					</article>
+					<article class="cv-entry">
+						<div class="cv-date">2023–2024</div>
+						<div>
+							<h3>BSc Thesis Research</h3>
+							<p class="place">Waveguide-Integrated Graphene Saturable Absorbers · University of Ioannina</p>
+							<details class="cv-details">
+								<summary>Explore the research</summary>
+								<ul>
+									<li>Adapted a free-space graphene model to integrated photonic waveguides using modal properties calculated with Lumerical MODE.</li>
+									<li>Designed and optimized a CMOS-compatible graphene-loaded waveguide cavity.</li>
+									<li>Performed Fortran-based multidimensional parameter studies of nonlinear absorption and critical-coupling behavior.</li>
+								</ul>
+							</details>
+						</div>
+					</article>
+				</section>
+
+				<section class="cv-section" aria-labelledby="education-title">
+					<h2 class="cv-section-title" id="education-title">Education</h2>
+					<article class="cv-entry">
+						<div class="cv-date">2024–2026</div>
+						<div>
+							<h3>MSc in Technologies of Advanced Materials</h3>
+							<p class="place">Department of Materials Science and Engineering · University of Ioannina</p>
+							<p class="cv-education-note">Specialization in Physics and Computational Science of Advanced Materials. Thesis: <em>Study of graphene saturable absorption for near-infrared optical pulse reshaping</em>.</p>
+							<span class="cv-highlight">Thesis 10/10</span><span class="cv-highlight">Course average 8.92/10</span><span class="cv-highlight">Expected Sep 2026</span>
+						</div>
+					</article>
+					<article class="cv-entry">
+						<div class="cv-date">2018–2024</div>
+						<div>
+							<h3>BSc in Physics</h3>
+							<p class="place">Department of Physics · University of Ioannina</p>
+							<p class="cv-education-note">Thesis: <em>Graphene-Based Saturable Absorbers in Waveguide-Integrated Schemes</em>.</p>
+							<span class="cv-highlight">Thesis 10/10</span>
+						</div>
+					</article>
+				</section>
+
+				<section class="cv-section" aria-labelledby="teaching-title">
+					<h2 class="cv-section-title" id="teaching-title">Teaching &amp; Communication</h2>
+					<article class="cv-entry">
+						<div class="cv-date">2025–2026</div>
+						<div><h3>Teaching Assistant</h3><p class="place">Department of Materials Science and Engineering · University of Ioannina</p><p>Led weekly fourth-year laboratory sessions, supported photocurrent experiments and provided technical evaluation and feedback.</p></div>
+					</article>
+					<article class="cv-entry">
+						<div class="cv-date">2024</div>
+						<div><h3>Conference Poster Presentation</h3><p class="place">XXXVIII Panhellenic Conference on Solid State Physics and Materials Science</p><p><em>Graphene-Based Saturable Absorbers in Waveguide-Integrated Schemes</em>, with V. Nousia, S. Doukas and E. Lidorikis.</p></div>
+					</article>
+				</section>
+
+				<section class="cv-section" aria-labelledby="skills-title">
+					<h2 class="cv-section-title" id="skills-title">Technical Skills</h2>
+					<div class="cv-skills">
+						<div class="cv-skill"><h3>Programming</h3><p>Fortran, Python, C, LaTeX</p></div>
+						<div class="cv-skill"><h3>Scientific Computing</h3><p>Automated workflows, large-scale parameter studies, cluster computing, data analysis and visualization</p></div>
+						<div class="cv-skill"><h3>Numerical Methods</h3><p>Transfer-matrix method, numerical integration and ordinary differential equation solvers</p></div>
+						<div class="cv-skill"><h3>Software</h3><p>COMSOL Multiphysics, Lumerical MODE and Lumerical FDTD</p></div>
+					</div>
+				</section>
+
+				<section class="cv-section" aria-labelledby="languages-title">
+					<h2 class="cv-section-title" id="languages-title">Languages</h2>
+					<div class="cv-skills">
+						<div class="cv-skill"><h3>Greek</h3><p>Native</p></div>
+						<div class="cv-skill"><h3>English</h3><p>C2 proficiency</p></div>
+					</div>
+				</section>
+
+				<p class="cv-note">Academic references are available upon request.</p>
+			</main>
+
+			<div id="copyright"><ul><li>&copy; Agni Pythara</li><li>Design foundation: <a href="https://html5up.net">HTML5 UP</a></li></ul></div>
+		</div>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
