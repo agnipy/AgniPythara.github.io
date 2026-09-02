@@ -4687,3 +4687,146 @@ input, select, textarea {
 		}
 
 	}
+	/* Stone off-white background */
+#wrapper,
+#wrapper > .bg {
+	background-color: #ddddd9 !important;
+    background-image: none !important;
+}
+/* deedda */
+/* Όνομα */
+#intro h1 {
+    color: #26363A;
+}
+
+/* Περιγραφή */
+#intro p {
+    color: #3F4544;
+}
+
+/* Links */
+#intro a {
+    color: #7c955d;
+}
+
+/* Κουμπί με το βέλος */
+#intro .button {
+    color: #26363A !important;
+    box-shadow: inset 0 0 0 2px #26363A;
+}
+
+#intro .button:hover {
+    color: #212b2d !important;
+    box-shadow: inset 0 0 0 2px #040404;
+}
+/* Navigation text */
+#nav ul.links li a,
+#nav ul.icons li a {
+    color: #26363A;
+}
+/* Ενεργό tab */
+#nav ul.links li.active a {
+    color: #26363A !important;
+}
+
+/* Όλα τα εικονίδια στο hover */
+.icon:hover::before,
+a.icon:hover::before,
+#nav ul.icons a:hover::before,
+#footer ul.icons a:hover::before {
+    color: #26363a75 !important;
+}
+
+/* Κυκλικό πλαίσιο των social icons */
+ul.icons.alt li a.icon:hover::before {
+    box-shadow: inset 0 0 0 2px #26363a75 !important;
+}
+
+/* Εικονίδια μέσα σε κουμπιά */
+.button.icon:hover::before {
+    color: #26363a75 !important;
+}
+
+a:hover {
+    color: #26363ac5 !important;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+button:hover,
+.button:hover {
+    color: #26363ac5 !important;
+    box-shadow: inset 0 0 0 2px #26363ac5 !important;
+}
+/* Πλαίσιο με το όνομα στο header */
+#header .logo:hover {
+    color: #26363a !important;
+    border-color: #26363a !important;
+}
+
+/* Τίτλος της ενεργής καρτέλας */
+#nav ul.links li.active > a,
+#nav ul.links li.active > a:hover {
+    color: #26363a !important;
+}
+
+/* Hover σε όλες τις καρτέλες */
+#nav ul.links li > a:hover {
+    color: #26363a75 !important;
+}
+
+/* Ενεργή καρτέλα όταν γίνεται hover */
+#nav ul.links li.active:hover {
+    background-color: #26363a75 !important;
+}
+
+#nav ul.links li.active:hover > a {
+    color: #26363a75 !important;
+}
+
+/* Αποφυγή εμφάνισης του παλιού background κατά τη φόρτωση */
+html,
+body,
+body.is-preload,
+#wrapper,
+#wrapper > .bg,
+#wrapper.fade-in::before {
+    background-color: #dedfdb !important;
+}
+
+#wrapper > .bg {
+    background-image: none !important;
+}
+
+#wrapper.fade-in::before {
+    background: #F4F1EB !important;
+}
+/* Social icons — κανονική κατάσταση */
+#nav ul.icons li a.icon,
+#nav ul.icons li a.icon::before,
+#footer ul.icons li a.icon,
+#footer ul.icons li a.icon::before {
+    color: #26363A !important;
+    transition: color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* Hover, click και keyboard focus */
+#nav ul.icons li a.icon:hover,
+#nav ul.icons li a.icon:hover::before,
+#nav ul.icons li a.icon:focus,
+#nav ul.icons li a.icon:focus::before,
+#nav ul.icons li a.icon:active,
+#nav ul.icons li a.icon:active::before,
+#footer ul.icons li a.icon:hover,
+#footer ul.icons li a.icon:hover::before,
+#footer ul.icons li a.icon:focus,
+#footer ul.icons li a.icon:focus::before,
+#footer ul.icons li a.icon:active,
+#footer ul.icons li a.icon:active::before {
+    color: #26363a9b !important;
+}
+.github-icon,
+.github-icon::before {
+    color: #000000 !important;
+}

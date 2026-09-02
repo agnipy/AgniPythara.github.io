@@ -11,20 +11,57 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+    /* Οριζόντια διάταξη στοιχείων επικοινωνίας */
+    .split.contact {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 100%;
+    }
+
+    .split.contact > section,
+    .split.contact > section.alt {
+        width: auto;
+        min-width: 0;
+        padding: 2.5rem 2rem;
+        border-top: none;
+        border-left: none;
+    }
+
+    .split.contact > section:first-child {
+        border-left: none;
+    }
+
+    /* Κάθετη διάταξη σε κινητά */
+    @media screen and (max-width: 736px) {
+        .split.contact {
+            grid-template-columns: 1fr;
+        }
+
+        .split.contact > section,
+        .split.contact > section.alt {
+            padding: 2rem;
+            border-left: none;
+            border-top: none;
+        }
+
+        .split.contact > section:first-child {
+            border-top: none;
+        }
+    }
+</style>
 	</head>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
 			<div id="wrapper" class="fade-in">
 
+
 				<!-- Intro -->
 					<div id="intro">
 						<h1>Agni Pythara<br />
 						</h1>
-						<p>Early-career computational photonics researcher with a background in physics and advanced materials. Research
-						interests include nonlinear and ultrafast optics, graphene carrier dynamics, integrated photonics, and optical pulse
-						shaping, with an emphasis on physics-based numerical modelling and an interest in emerging photonic computing
-						architectures.
+						<p>Hi, I’m Agni. I’m a physicist with a broad interest in understanding light–matter interactions and exploring challenging scientific problems through theory, modelling, and experiment. This portfolio presents a selected research project and provides an overview of my academic background, research experience, and technical skills. Visit the CV section to learn more.
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -42,29 +79,77 @@
 							<li><a href="cv.html">CV</a></li>
 							<!-- <li><a href="elements.html">Elements Reference</a></li> -->
 						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
+							<ul class="icons">
+						<li>
+							<a href="mailto:agnespythara@gmail.com"class="icon solid fa-envelope">
+							<span class="label">Email</span>
+							</a>
+						</li>
+
+						<li>
+							<a href="https://github.com/agnipy"class="icon brands fa-github github-icon"target="_blank"rel="noopener noreferrer">
+							<span class="label">GitHub</span>
+							</a>
+						</li>
+					</ul>
 					</nav>
+
 
 				<!-- Main -->
 					<div id="main">
 
 						<!-- Featured Post -->
 							<article class="post featured">
-								<header class="major">
-									<h2><a href="#">Graphene Saturable Absorption: Simulation & Data Analysis Pipeline<br /></a></h2>
-									<p>A Python scientific-computing pipeline for graphene saturable-absorption modelling, featuring synthetic data generation, parameter sweeps, model fitting, residual analysis, and scientific visualization.</p>
-								</header>
-								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="#" class="button large">View Project</a></li>
-								</ul>
-							</article>
+	<header class="major">
+		<h2>
+			<a href="https://layeroptics.streamlit.app/"
+			   target="_blank"
+			   rel="noopener noreferrer">
+				LayerOptics: Interactive Multilayer Thin-Film Designer
+			</a>
+		</h2>
 
+		<p>
+			An interactive Python software application for designing and
+			simulating multilayer thin-film optical structures using the
+			Transfer Matrix Method. Users can build custom layer stacks,
+			explore TE and TM optical response, calculate reflectance,
+			transmittance, and absorptance spectra, and export the results
+			as CSV files. Try the
+			<a href="https://layeroptics.streamlit.app/"
+			   target="_blank"
+			   rel="noopener noreferrer">live application</a>.
+		</p>
+	</header>
+
+	<a href="https://layeroptics.streamlit.app/"
+	   class="image main"
+	   target="_blank"
+	   rel="noopener noreferrer">
+		<img src="images/layeroptics_app.png"
+			 alt="LayerOptics interactive multilayer thin-film design software" />
+	</a>
+
+	<ul class="actions special">
+		<li>
+			<a href="https://layeroptics.streamlit.app/"
+			   class="button large"
+			   target="_blank"
+			   rel="noopener noreferrer">
+				Launch Live App
+			</a>
+		</li>
+
+		<li>
+			<a href="https://github.com/agnipy/tmm-multilayer-optics"
+			   class="button large"
+			   target="_blank"
+			   rel="noopener noreferrer">
+				View Source Code
+			</a>
+		</li>
+	</ul>
+</article>
 						<!-- Posts
 							<section class="posts">
 								<article>
@@ -90,118 +175,21 @@
 									<ul class="actions special">
 										<li><a href="#" class="button">Full Story</a></li>
 									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 18, 2017</span>
-										<h2><a href="#">Ante mattis<br />
-										interdum dolor</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 14, 2017</span>
-										<h2><a href="#">Tempus sed<br />
-										nulla imperdiet</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 11, 2017</span>
-										<h2><a href="#">Odio magna<br />
-										sed consectetur</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<span class="date">April 7, 2017</span>
-										<h2><a href="#">Augue lorem<br />
-										primis vestibulum</a></h2>
-									</header>
-									<a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis magna etiam.</p>
-									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
-									</ul>
-								</article>
-							</section> -->
+								</article>-->
 
-						<!-- Footer -->
-							<!-- <footer> -->
-								<!-- <div class="pagination"> -->
-									<!--<a href="#" class="previous">Prev</a>-->
-									<!-- <a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a> -->
-								<!-- </div>
-							</footer> -->
-
-					<!-- </div> -->
-
-				<!-- Footer -->
-					<!-- <footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form> 
-						</section>-->
 						<section class="split contact">
 							<section class="alt">
 								<h3>Location</h3>
-								<p>1234 Somewhere Road #87257<br />
-								Nashville, TN 00000-0000</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(000) 000-0000</a></p>
+								<p>Ioannina, Greece</p>
 							</section>
 							<section>
 								<h3>Email</h3>
-								<p><a href="#">info@untitled.tld</a></p>
+								<p><a href="mailto:agnespythara@gmail.com">agnespythara@gmail.com</a></p>
 							</section>
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://github.com/agnipy" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
 							</section>
 						</section>

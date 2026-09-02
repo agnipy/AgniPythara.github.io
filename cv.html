@@ -2,51 +2,68 @@
 <!-- Massively by HTML5 UP | html5up.net | CCA 3.0 -->
 <html lang="en">
 	<head>
-		<!-- <title>CV | Agni Pythara</title> -->
+		<title>CV | Agni Pythara</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Curriculum vitae of Agni Pythara, computational photonics researcher." />
+		<meta name="description" content="Curriculum vitae of Agni Pythara, physicist and photonics researcher." />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			:root { --cv-ink: #212931; --cv-muted: #6f7780; --cv-accent: #7a5c43; --cv-soft: #f5f1eb; }
-			.cv-page { padding: 5rem 7rem !important; }
-			.cv-hero { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: end; padding-bottom: 3rem; border-bottom: solid 2px var(--cv-ink); }
+			:root { --cv-ink: #26363a; --cv-muted: #596567; --cv-accent: #637174; --cv-soft: #dedfdb; --cv-paper: #ffffff; --cv-line: #e6e7e4; }
+			html, body, body.is-preload, #wrapper, #wrapper > .bg { background-color: var(--cv-soft) !important; background-image: none !important; }
+			#main.cv-page { background: var(--cv-paper); color: var(--cv-ink); }
+			#main.cv-page, #main.cv-page p, #main.cv-page li, #main.cv-page a, #main.cv-page summary { font-family: "Source Sans 3", Helvetica, Arial, sans-serif; }
+			#main.cv-page p, #main.cv-page li { font-weight: 400 !important; text-align: left; }
+			#main.cv-page .cv-summary, #main.cv-page .cv-education-note, #main.cv-page .cv-skill p, #main.cv-page .cv-note { font-weight: 400 !important; }
+			.cv-page { padding: 5rem 7rem 4rem !important; }
+			.cv-hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3rem; align-items: end; padding-bottom: 2.6rem; border-bottom: solid 2px var(--cv-ink); }
 			.cv-hero h1 { margin: 0 0 .35rem; font-size: clamp(2.7rem, 7vw, 5.4rem); line-height: .95; letter-spacing: .03em; }
-			.cv-kicker { margin: 0; color: var(--cv-accent); font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+			.cv-kicker { margin: 0 0 .75rem; color: var(--cv-accent); font-size: .78rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
 			.cv-contact { margin: 0; text-align: right; list-style: none; }
-			.cv-contact li { margin: .2rem 0; }
+			.cv-contact li { margin: .3rem 0; }
 			.cv-contact a { border-bottom-color: transparent; }
-			.cv-summary { max-width: 58rem; margin: 3rem auto 4rem; font-size: 1.12rem; line-height: 1.95; text-align: center; }
-			.cv-section { margin: 4.5rem 0; }
+			.cv-download { margin-top: 1.15rem !important; }
+			.cv-download .button { margin: 0; background: var(--cv-ink); box-shadow: none; color: #fff !important; }
+			.cv-download .button:hover, .cv-download .button:focus { background: var(--cv-accent); color: #fff !important; }
+			.cv-summary { max-width: 52rem; margin: 2.8rem auto 1.8rem; font-size: 1.12rem; line-height: 1.75; text-align: center !important; }
+			.cv-focus { display: flex; flex-wrap: wrap; justify-content: center; gap: .55rem; margin: 0 auto 4.5rem; }
+			.cv-focus span { padding: .45rem .85rem; border: solid 1px var(--cv-line); border-radius: 999px; color: var(--cv-muted); font-size: .7rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+			.cv-section { margin: 4.25rem 0; scroll-margin-top: 6rem; }
 			.cv-section-title { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; font-size: 1.35rem; letter-spacing: .18em; }
-			.cv-section-title:after { content: ""; height: 1px; flex: 1; background: #d9d9d9; }
+			.cv-section-title:after { content: ""; height: 1px; flex: 1; background: var(--cv-line); }
 			.cv-entry { display: grid; grid-template-columns: 9rem 1fr; gap: 2rem; margin: 0 0 2.1rem; }
 			.cv-date { color: var(--cv-muted); font-size: .82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding-top: .4rem; }
 			.cv-entry h3 { margin: 0; font-size: 1.25rem; }
 			.cv-entry .place { margin: .35rem 0 .9rem; color: var(--cv-accent); font-weight: 600; }
-			details.cv-details { border: solid 1px #dedede; border-radius: 4px; background: #fff; transition: background-color .2s ease, border-color .2s ease; }
-			details.cv-details[open] { background: var(--cv-soft); border-color: #c9b8a8; }
+			details.cv-details { border: solid 1px var(--cv-line); border-radius: 3px; background: #fff; transition: background-color .2s ease, border-color .2s ease; }
+			details.cv-details[open] { background: #f3f4f2; border-color: #aeb5b4; }
 			details.cv-details summary { position: relative; padding: .85rem 3rem .85rem 1rem; cursor: pointer; font-size: .78rem; font-weight: 700; letter-spacing: .12em; list-style: none; text-transform: uppercase; }
+			details.cv-details summary:hover, details.cv-details summary:focus { color: var(--cv-accent); }
+			details.cv-details summary:focus-visible { outline: solid 2px var(--cv-accent); outline-offset: 3px; }
 			details.cv-details summary::-webkit-details-marker { display: none; }
 			details.cv-details summary:after { content: "+"; position: absolute; right: 1rem; font-size: 1.25rem; line-height: 1; }
 			details.cv-details[open] summary:after { content: "−"; }
 			details.cv-details ul { margin: 0; padding: 0 2rem 1.3rem 3rem; }
 			details.cv-details li { margin-bottom: .55rem; }
 			.cv-education-note { margin: .6rem 0 0; }
-			.cv-highlight { display: inline-block; margin: .75rem .45rem 0 0; padding: .35rem .65rem; border: solid 1px #d6c8bb; border-radius: 999px; background: var(--cv-soft); font-size: .72rem; font-weight: 700; letter-spacing: .06em; }
-			.cv-skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
-			.cv-skill { padding: 1.4rem 1.5rem; border-left: solid 3px var(--cv-accent); background: var(--cv-soft); }
-			.cv-skill h3 { margin: 0 0 .5rem; font-size: .9rem; }
-			.cv-skill p { margin: 0; line-height: 1.7; }
-			.cv-note { text-align: center; color: var(--cv-muted); font-style: italic; }
+			.cv-highlight { display: inline-block; margin: .75rem .45rem 0 0; padding: .35rem .65rem; border: solid 1px #c7ccca; border-radius: 999px; background: #f3f4f2; font-size: .72rem; font-weight: 700; letter-spacing: .06em; }
+			.cv-skills { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 3rem; row-gap: 0; }
+			.cv-skill { padding: 1.15rem 0 1.25rem; border: 0; border-bottom: solid 1px var(--cv-line); background: transparent; }
+			.cv-skill h3 { margin: 0 0 .35rem; color: var(--cv-ink); font-size: .82rem; letter-spacing: .1em; }
+			.cv-skill p { margin: 0; color: var(--cv-muted); font-size: .98rem; line-height: 1.6; }
+			.cv-note { margin: 4rem 0 0; padding-top: 2rem; border-top: solid 1px var(--cv-line); text-align: center; color: var(--cv-muted); font-style: italic; }
+			#header .logo:hover, #header .logo:focus, #nav a:hover, #main a:hover { color: var(--cv-accent) !important; border-color: var(--cv-accent) !important; }
 			@media screen and (max-width: 980px) { .cv-page { padding: 4rem 3rem !important; } }
 			@media screen and (max-width: 736px) {
 				.cv-page { padding: 3rem 1.4rem !important; }
-				.cv-hero { grid-template-columns: 1fr; }
+				.cv-hero { grid-template-columns: 1fr; gap: 1.5rem; }
 				.cv-contact { padding-left: 0; text-align: left; }
 				.cv-entry { grid-template-columns: 1fr; gap: .45rem; }
 				.cv-skills { grid-template-columns: 1fr; }
+				.cv-focus { justify-content: flex-start; margin-bottom: 3.5rem; }
 			}
 		</style>
 	</head>
@@ -61,22 +78,31 @@
 				<ul class="icons">
 					<li><a href="mailto:agnespythara@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 				</ul>
+				 <li><a href="https://github.com/agnipy"class="icon brands fa-github github-icon"target="_blank"rel="noopener noreferrer"><span class="label">GitHub</span>
+    </a>
+</li>
+        </a>
+    </li>
+	<li>
 			</nav>
 
 			<main id="main" class="cv-page">
-				<!-- <section class="cv-hero" aria-labelledby="cv-title">
+				<section class="cv-hero" aria-labelledby="cv-title">
 					<div>
-						<p class="cv-kicker">Curriculum Vitae</p>
+						<!-- <p class="cv-kicker">Curriculum Vitae</p> -->
 						<h1 id="cv-title">Agni<br />Pythara</h1>
 					</div>
 					<ul class="cv-contact">
 						<li>Ioannina, Greece</li>
 						<li><a href="mailto:agnespythara@gmail.com">agnespythara@gmail.com</a></li>
-						<li><a href="tel:+306975770187">+30 697 577 0187</a></li>
+						<li class="cv-download"><a href="Agni_Pythara_cv.pdf" class="button icon solid fa-download" download="Agni_Pythara_CV.pdf">Download CV</a></li>
 					</ul>
-				</section> -->
+				</section>
 
-				<p class="cv-summary">Early-career computational photonics researcher with a background in physics and advanced materials. My work focuses on nonlinear and ultrafast optics, graphene carrier dynamics, integrated photonics and optical pulse shaping, combining physics-based modelling with large-scale numerical simulation.</p>
+				<p class="cv-summary">Physicist and early-career researcher with a background in advanced materials. I investigate light–matter interactions by combining physical insight, numerical modelling and scientific computing, with experience spanning nonlinear optics, integrated photonics and optical pulse shaping.</p>
+				<div class="cv-focus" aria-label="Areas of expertise">
+					<span>Physics</span><span>Photonics</span><span>Numerical modelling</span><span>Scientific computing</span>
+				</div>
 
 				<section class="cv-section" aria-labelledby="research-title">
 					<h2 class="cv-section-title" id="research-title">Research Experience</h2>
@@ -84,7 +110,7 @@
 						<div class="cv-date">2025–2026</div>
 						<div>
 							<h3>MSc Thesis Research</h3>
-							<p class="place">Study of graphene saturable absorption for near-infrared optical pulse reshaping · University of Ioannina</p>
+							<p class="place">Graphene Saturable Absorption &amp; Optical Pulse Shaping · University of Ioannina</p>
 							<details class="cv-details">
 								<summary>Explore the research</summary>
 								<ul>
@@ -123,7 +149,8 @@
 						<div>
 							<h3>MSc in Technologies of Advanced Materials</h3>
 							<p class="place">Department of Materials Science and Engineering · University of Ioannina</p>
-							<p class="cv-education-note">Specialization in Physics and Computational Science of Advanced Materials. Thesis: <em>Study of graphene saturable absorption for near-infrared optical pulse reshaping</em>.</p>
+							<p class="cv-education-note">Specialization in Physics and Computational Science of Advanced Materials.</p>
+							<p class="cv-thesis-note">Thesis: <em>Study of graphene saturable absorption for near-infrared optical pulse reshaping</em>.</p>
 							<span class="cv-highlight">Thesis 10/10</span><span class="cv-highlight">Course average 8.92/10</span><span class="cv-highlight">Expected Sep 2026</span>
 						</div>
 					</article>
@@ -141,12 +168,12 @@
 				<section class="cv-section" aria-labelledby="teaching-title">
 					<h2 class="cv-section-title" id="teaching-title">Teaching &amp; Communication</h2>
 					<article class="cv-entry">
-						<div class="cv-date">2025–2026</div>
+						<div class="cv-date">10/2025–01/2026</div>
 						<div><h3>Teaching Assistant</h3><p class="place">Department of Materials Science and Engineering · University of Ioannina</p><p>Led weekly fourth-year laboratory sessions, supported photocurrent experiments and provided technical evaluation and feedback.</p></div>
 					</article>
 					<article class="cv-entry">
 						<div class="cv-date">2024</div>
-						<div><h3>Conference Poster Presentation</h3><p class="place">XXXVIII Panhellenic Conference on Solid State Physics and Materials Science</p><p><em>Graphene-Based Saturable Absorbers in Waveguide-Integrated Schemes</em>, with V. Nousia, S. Doukas and E. Lidorikis.</p></div>
+						<div><h3>Conference Poster Presentation</h3><p class="place">XXXVIII Panhellenic Conference on Solid State Physics and Materials Science</p><p><em>Graphene-Based Saturable Absorbers in Waveguide-Integrated Schemes</em>, A. Pythara, V. Nousia, S. Doukas, and E. Lidorikis.<p></div>
 					</article>
 				</section>
 
@@ -168,7 +195,6 @@
 					</div>
 				</section>
 
-				<p class="cv-note">Academic references are available upon request.</p>
 			</main>
 
 			<div id="copyright"><ul><li>&copy; Agni Pythara</li><li>Design foundation: <a href="https://html5up.net">HTML5 UP</a></li></ul></div>
